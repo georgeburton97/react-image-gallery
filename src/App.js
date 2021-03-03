@@ -25,7 +25,7 @@ function App() {
     <div className="container mx-auto">
 
     <div className="flex items-center">
-      <Logo className="mx-auto mt-8"/>
+      <Logo className="mx-auto mt-8 px-10"/>
      
     </div>
       
@@ -36,7 +36,7 @@ function App() {
 
       {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1>}
 
-      {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading</h1> : <div className="grid grid-cols-3 gap-4">
+      {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading</h1> : <div className="px-8 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-8">
         {images.map(image => (
           <ImageCard key={image.id} image={image} />
         ))}
